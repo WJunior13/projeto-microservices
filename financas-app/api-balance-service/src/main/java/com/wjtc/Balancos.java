@@ -1,0 +1,9 @@
+package com.wjtc;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface Balancos extends JpaRepository<Balanco, Integer> {
+    Optional<Balanco> findByAccountId(String contaId);
+}
