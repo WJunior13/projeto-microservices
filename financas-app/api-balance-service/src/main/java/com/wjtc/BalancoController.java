@@ -15,6 +15,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api-balance-service/balancos")
 public class BalancoController {
+
     private final Balancos balancos;
 
     @Autowired
