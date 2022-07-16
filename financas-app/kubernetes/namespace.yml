@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: financas-app
+  labels:
+    name: financas-app
+    istio-injection: enabled

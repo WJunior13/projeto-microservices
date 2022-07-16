@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: balance-app-blue
+  namespace: financas-app
+  labels:
+    version: blue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: balance-app
+      namespace: financas-app
+  template:
+    metadata:
+      labels:
+        app: balance-app
+        namespace: financas-app
+        version: blue
+    spec:
+      containers:
+        - name: balance-app
+          image: wjcarrer/api-balance-service:blue
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
